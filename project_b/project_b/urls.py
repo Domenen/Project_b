@@ -1,9 +1,11 @@
 from django.contrib import admin
 from django.urls import path
 
-from .views import hello
+from . import views
 
 urlpatterns = [
-    path('', hello),
+    path("hello/", views.hello),
+    path("hello/<str:name>/", views.hello, name="hello"),
+    path("feedback/", views.FeedbackView.as_view()),
     path('admin/', admin.site.urls),
 ]

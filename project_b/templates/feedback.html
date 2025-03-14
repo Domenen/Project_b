@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Форма отзыва</title>
+</head>
+<body>
+    <h1>Форма отзыва</h1>
+    <form method="POST" action="">
+
+        <label for="name">Имя:</label>
+        <input type="text" id="name" name="name" required>
+        <br>
+        <label for="review">Отзыв:</label>
+        <textarea name="user_feedback" id='user_feedback' required></textarea>
+        <br>
+        <input type="submit" value="Отправить">
+        {% csrf_token %}
+    </form>
+</body>
+</html>
