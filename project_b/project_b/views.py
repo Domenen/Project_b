@@ -3,7 +3,7 @@ from django.views import View
 
 def hello(request, name='John'):
     context = {'name': name}
-    return render(request, 'hello.html', context)
+    return render(request, 'my_template.html', context)
 
 
 class FeedbackView(View):
